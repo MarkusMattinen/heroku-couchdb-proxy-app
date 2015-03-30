@@ -11,6 +11,7 @@ http {
     types_hash_max_size 2048;
     include mime.types;
     server {
+        access_log stderr combined;
         listen <%= ENV['PORT'] %>;
         server_name _;
         client_max_body_size 4G;
